@@ -8,23 +8,34 @@
 
 3. Repository
  - 버전(commit) 이력과 파일들이 영구적으로 저장되는 영역, 모든 버전과 변경 이록이 기록됨 
-
 ### git 초기화
 ```bash
 $ git init
 ```
-
 #### 숨겨진 폴더 보기 
 ```bash
 $ ls -a
 ```
-
 ### 상태 확인 명령어
 ```bash
 $ git status
 ```
-
 ### staging area에 추가
 ```bash
 $ git add {path} <folder_name>/{file_name}
+```
+### Repository에 저장하기
+```bash
+$ git commit -m "commit message"
+```
+### git 기초 설정
+```bash
+$ git config --global user.email "gwalgwal98@naver.com"
+$ git config --global user.name "탁윤희"
+$ git config --global --list
+```
+
+### 커밋 기록 확인하기
+```bash
+$ git log
 ```
