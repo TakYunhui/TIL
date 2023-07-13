@@ -66,11 +66,26 @@ $ vim ~/.gitconfig
 $ git log --oneline
 ```
 
-### github에 git push
+### 원격 저장소 git에 등록
 ```bash
-$ git remote add origin {본인 github 주소}
+$ git remote add origin {remote_nickname} {remote_url}
 $ git remote -v
 $ git add .
-# git log & status 확인 후
+
+```
+
+### 원격 저장소에 업로드
+```bash
+# git log & status 확인 후 
 $ git push origin master
+```
+
+### 원격 저장소에 있는 내용 복제
+- 최초로 내려 받을 때 (ex: 아무 것도 작업 안 한 집으로 옮기기)
+```bash
+$ git clone repository_url
+```
+- 작업한 내용이 있을 때
+```bash
+$ git pull origin master
 ```
