@@ -1,0 +1,30 @@
+# GIT 이란...
+> 분산 버전 관리 시스템
+
+## Git의 3가지 영역
+1. Working Area
+  - 실제 작업 영역
+2. Staging Area
+
+3. Repository
+ - 버전(commit) 이력과 파일들이 영구적으로 저장되는 영역, 모든 버전과 변경 이록이 기록됨 
+
+### git 초기화
+```bash
+$ git init
+```
+
+#### 숨겨진 폴더 보기 
+```bash
+$ ls -a
+```
+
+### 상태 확인 명령어
+```bash
+$ git status
+```
+
+### staging area에 추가
+```bash
+$ git add {path} <folder_name>/{file_name}
+```
