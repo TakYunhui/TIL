@@ -65,3 +65,12 @@ $ vim ~/.gitconfig
 ```bash
 $ git log --oneline
 ```
+
+### github에 git push
+```bash
+$ git remote add origin {본인 github 주소}
+$ git remote -v
+$ git add .
+# git log & status 확인 후
+$ git push origin master
+```
