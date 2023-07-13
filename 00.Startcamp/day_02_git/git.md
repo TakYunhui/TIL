@@ -2,12 +2,14 @@
 > 분산 버전 관리 시스템
 
 ## Git의 3가지 영역
-1. Working Area
+1. Working Directory
   - 실제 작업 영역
 2. Staging Area
 
 3. Repository
  - 버전(commit) 이력과 파일들이 영구적으로 저장되는 영역, 모든 버전과 변경 이록이 기록됨 
+ - remote: github, gitlab != git 
+ - local
 ### git 초기화
 ```bash
 $ git init
@@ -47,4 +49,19 @@ $ git commit --amend
 # 2. 커밋 메시지를 수정한다
 # 3. ESC를 눌러 삽입 상태를 종료한다
 # 4. :wq를 입력해서 저장하고 종료한다
+```
+
+### git 설정초기화
+```bash
+# vim을 활용해서 설정 제거하기
+# vim git 설정 파일 열기
+$ vim ~/.gitconfig
+# insert 키: 수정 상태 만들기
+# --insert--인 상태에서 모든 내용 삭제
+# esc: 수정 상태 종료
+# :wq 
+```
+### commit 한 줄로 보기
+```bash
+$ git log --oneline
 ```
