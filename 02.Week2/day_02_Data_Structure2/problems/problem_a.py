@@ -7,8 +7,8 @@ def make_sum(num):
     result = 0
     for i in range(num+1):
         result += i
-    print(result)
+    return result
 
 
-make_sum(10)
+print(make_sum(10))
 

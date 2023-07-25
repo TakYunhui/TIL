@@ -12,6 +12,6 @@ def make_odd_even(my_list):
             new_list.append(i * 3)
         else:
             new_list.append(i ** 2)
-    print(new_list)
+    return new_list
 
-make_odd_even([1, 2, 3, 4, 5])
+print(make_odd_even([1, 2, 3, 4, 5]))
