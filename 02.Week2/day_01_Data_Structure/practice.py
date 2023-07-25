@@ -6,6 +6,8 @@ my_str = 'veni is cute'
 print(f'첫 번째 출력:{my_str}')
 
 print(f'두 번째 출력:{my_str.title()}')
+print(my_str.title().istitle())
+print(my_str.istitle())
 print(f'세 번째 출력:{my_str}')
 
 # 문자열.strip 
