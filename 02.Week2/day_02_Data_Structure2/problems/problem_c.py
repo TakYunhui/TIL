@@ -4,3 +4,14 @@
 # 함수 make_odd_even를 작성하시오.
 
 # make_odd_even([1, 2, 3, 4, 5]) # [3, 4, 9, 16, 15]
+
+def make_odd_even(my_list):
+    new_list = []
+    for i in my_list:
+        if i % 2 == 1:
+            new_list.append(i * 3)
+        else:
+            new_list.append(i ** 2)
+    print(new_list)
+
+make_odd_even([1, 2, 3, 4, 5])
