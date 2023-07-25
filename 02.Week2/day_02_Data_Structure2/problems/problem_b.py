@@ -12,3 +12,12 @@ scores = {
 
 # make_new_dict(scores) -> {'Bob': 92}
 
+def make_new_dict(scores):
+    new_dict = {}
+    for k, v in scores.items():
+        if v >= 90:
+            new_dict[k] = v
+    print(new_dict)
+
+
+make_new_dict(scores)
