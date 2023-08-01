@@ -1,6 +1,6 @@
 # reverse() 구현
 
-greeting = 'hi my name istak'
+greeting = 'hi my name is tak'
 
 def reverse_prac(data):
     result = ''
@@ -59,3 +59,13 @@ def max_sol(data):
 print(max_sol(data))
         
 
+# average
+def avge(data):
+    result = 0
+    count = 0
+    for num in data:
+        result += num
+        count += 1
+    return int(result / count)
+
+print(avge(data))

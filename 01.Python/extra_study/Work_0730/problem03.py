@@ -1,8 +1,8 @@
 def is_user_data_valid(user_data):
     pass
     # 여기에 코드를 작성합니다.
-    for key in user_data.keys():
-        if user_data[key] == '':
+    for value in user_data.values():
+        if value == '':
             return False
     return True
 
@@ -36,3 +36,4 @@ if __name__ == '__main__':
     }
     print(is_user_data_valid(user_data4)) 
     # False
+
