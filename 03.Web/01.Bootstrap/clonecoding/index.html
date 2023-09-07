@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS 외부 참조 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <!-- CSS 내부 참조 -->
+  <style>
+
+    
+  </style>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <!-- div와 같은 기능을 하지만 의미론적 태그인 header로 영역 구분 -->
+  <header>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- me-auto | 제거 (오른쪽 여백 마진 제거), w-100 추가 : width 100% -->
+          <ul class="navbar-nav w-100 mb-2 mb-lg-0 justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">마이 캠퍼스</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">강의실</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">커뮤니티</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Help Desk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">멘토링 게시판</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">알람 아이콘</a>
+            </li>       
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                학번 이름
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">회원정보</a></li>
+                <li><a class="dropdown-item" href="#">로그아웃</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- 추가 링크 -->
+          <!-- 0 px 부터 991 px까지는 display: none -->
+          <!-- 992 px 이상 부터는 display: flex -->
+          <div class="d-none d-lg-flex fw-bold">
+            <!-- 회색 배경, 검은색 글씨 -->
+              <div class="bg-secondary nav-box">
+                JOB SSAFY
+                <hr class="border border-white border-2">
+              </div>
+            <!-- 파란색 배경, 흰색 글씨 -->
+              <div class="bg-primary text-white nav-box">
+                SSAFY GIT
+                <hr class="border border-white border-2">
+              </div>
+            <!-- 초록색 배경, 흰색 글씨 -->
+              <div class="bg-success text-white nav-box">
+                Meeting SSAFY
+                <hr class="border border-white border-2">
+              </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- main -->
+  <main class="container mt-3">
+      <!-- 출석체크 마일리지  -->
+      <section class="row justify-content-evenly">
+        <!-- 출석체크 -->
+        <div class="col-12 col-lg-4 bg-warning">
+          <div class="main-box-title d-flex justify-content-between ">
+            <h3>출석체크 & 현황</h3>
+            <button>+</button>
+          </div>
+          <div class="main-box-body row">
+          <!-- 날짜 & 요일 -->
+          <div class="col-4 text-primary">
+            <!-- h4 태그에 font-weight 설정이 되어 있어서 -->
+            <!-- 부모 요소에 적어도 상속 영향 안 받음 (상속은 우선순위가 제일 낮기 때문!) -->
+            <h4 class="fw-bold">09.07</h4>
+            <h4 class="fw-bold">목요일</h4>
+          </div>
+          <!-- button -->
+          <div class="col-7 offset-1 p-4">
+            <button class="btn btn-sm btn-light btn-height-100">입실하기</button>
+            <button class="btn btn-sm btn-light btn-height-100">퇴실하기</button>
+          </div>
+        </div>
+      </div>
+        <!-- 마일리지 -->
+        <div class="col-12 col-lg-7  bg-primary row p-4 text-white">
+          <div class="col-5">
+            <h4>마일리지</h4>
+            <h4>레벨 & 경험치</h4>
+          </div>
+          <div class="vr"></div>
+          <div class="col-6">
+            <h4>알림</h4>
+          </div>
+        </div>
+
+      </section>
+
+      <!--  커리큘럼  -->
+      <section>
+
+      </section>
+  </main>
+</body>
+</html>
