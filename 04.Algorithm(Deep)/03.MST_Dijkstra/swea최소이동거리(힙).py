@@ -1,8 +1,10 @@
 import heapq
 def dijkstra():
-    # 우선순위 큐
+    # 우선순위 큐, 누적거리 저장할 배열 distance 이용
+    INF = int(1e9) # 1억
+    distance = [INF] * (n+1)
     pq = []
-    heapq.heappush(pq, (0, s))
+    heapq.heappush(pq, (0, 0))
     # 시작점 누적 거리의 합 0으로 지정
     distance[0] = 0
 
@@ -31,11 +33,6 @@ def dijkstra():
 
     return distance[n]
 
-
-
-
-
-
 t = int(input())
 for tc in range(1, t+1):
     n, e = map(int, input().split()) # 마지막 정점 번호, 간선 개수
@@ -43,10 +40,5 @@ for tc in range(1, t+1):
     for _ in range(e):
         s, e, w = map(int, input().split()) # 시작, 끝, 거리 가중치
         arr[s].append((e, w))
-    # 누적 거리 저장할 배열 생성
-    INF = int(1e9)
-    distance = [INF] * n
-    dijkstra()
-
-
-    print(f'#{tc}')
+    result = dijkstra()
+    print(f'#{tc} {result}')
