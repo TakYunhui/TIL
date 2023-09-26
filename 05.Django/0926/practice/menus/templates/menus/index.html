@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% comment %} extends 태그는 항상 1번 라인에 {% endcomment %}
+{% block content %}
+  <h1>INDEX PAGE</h1>
+  <a href="{% url "menus:new"  %}">CREATE</a>
+  <hr>
+  <ul>
+    {% comment %} context dict에 있는 menus: menus {% endcomment %}
+    {% for menu in menus %}
+    <li>
+      <p>{{ menu.pk }}번째 메뉴</p>
+      <p>{{menu.name}}</p>
+      <p>{{menu.price}}원</p>
+
+      {% comment %} html이기에 각 정보를 공백으로 구분 {% endcomment %}
+      <form action="{% url "menus:delete" menu.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="DELETE">
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}
