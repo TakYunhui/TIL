@@ -10,9 +10,10 @@
 | 10/12 | Many to one relationships 2 |
 | 10/16 | Many to many relationships 1 |
 | 10/17 | Many to many relationships 2 |
+-> SQLite 사용 
+-> 프로그램 별 함수, 데이터 타입 등은 다를 수 있다
 
-
-## 231010: DQL
+## DQL
 ### Query
 - 데이터베이스로부터 정보를 요청
 - SQL 작성 코드 => 쿼리문(SQL문)
@@ -69,3 +70,68 @@ AND(&&), OR(||), NOT(!)
 - 레코드를 그룹화하여 요약본 생성 : GROUP BY
 - 집계 함수와 함께 사용
 - 집계 함수 : SUM, AVG, MAX, MIN, COUNT
+
+
+## DDL
+### CREATE 
+- 테이블 생성 : CREATE TABLE
+```
+[데이터 타입]
+1. NULL : 아무런 값도 포함하지 않음
+2. INTEGER : 정수
+3. REAL : 부동 소수점
+4. TEXT : 문자열
+5. BLOB : 이미지, 동영상, 문서 등 바이너리 데이터
+```
+```
+[제약 조건]
+1. PRIMARY KEY : 기본 키 지정
+2. NOT NULL : 해당 필드에 NULL 값 허용 X  
+3. FOREIGN KEY : 다른 테이블과의 외래 키 관계 정의
+```
+
+### ALTER
+- 테이블 및 필드 조작 : ALTER TABLE
+```
+1. ADD COLUMN : 필드 추가
+2. RENAME COLUMN : 필드 이름 변경
+3. DROP COLUMN : 필드 삭제
+- PK 가 아니며 UNIQUE 제약 조건이 없는 경우에만 작동 
+4. RENAME TO : 테이블 이름 변경
+```
+
+
+## DML
+### INSERT
+- 테이블 레코드 삽입 : INSERT INTO
+```SQL
+INSERT INTO
+  테이블명 (title, content, createdAt)
+VALUES 
+  ('title1', 'content1', '1900-01-01'),
+  ('title2', 'content2', '1800-01-01'),
+  ('title3', 'content3', '1700-01-01');
+```
+
+### DELETE
+- 테이블 레코드 삭제 : DELETE FROM
+
+### UPDATE
+- 테이블 레코드 수정 
+```SQL
+UPDATE tablename
+SET 세부사항
+WHERE 조건
+```
+
+### JOIN
+#### INNER JOIN
+- 두 테이블에서 값이 일치하는 레코드에 대해서만 결과 반환
+- 회원이 작성한 모든 게시글의 제목과 작성자명 조회
+#### LEFT JOIN
+- 오른쪽 테이블의 일치하는 레코드와 함께 왼쪽 테이블의 모든 레코드 반환
+- 게시글을 작성한 이력이 없는(NULL) 회원정보 조회 
+
+##### 계정 비활성화
+- 계정이 완전 삭제된 것이 아니라 대체할 어떤 정보로 만들어 둔다
+- 데이터 저장 안 해두면 복구 안 됨
