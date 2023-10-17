@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>회원가입 페이지</h1>
+<form action="{% url "accounts:signup" %}" method="POST">
+  {% comment %} POST 요청일때는 CSRF_Token 필수 {% endcomment %}
+  {% csrf_token %}
+  {% comment %} froms.py class ModelForm {% endcomment %}
+  {{ form }}
+  <input type="submit" value="가입하기">
+</form>
+{% endblock content %}
+
