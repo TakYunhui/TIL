@@ -1,0 +1,40 @@
+[
+{
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "title": "d",
+        "content": "d",
+        "created_at": "2023-10-17T00:24:37.700Z",
+        "updated_at": "2023-10-17T00:24:37.700Z",
+        "like_users": [
+            1
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "title": "dsf",
+        "content": "dsf",
+        "created_at": "2023-10-17T00:24:44.325Z",
+        "updated_at": "2023-10-17T00:24:44.325Z",
+        "like_users": []
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 3,
+    "fields": {
+        "user": 2,
+        "title": "s",
+        "content": "asdasd",
+        "created_at": "2023-10-17T01:57:01.386Z",
+        "updated_at": "2023-10-17T01:57:01.386Z",
+        "like_users": []
+    }
+}
+]
