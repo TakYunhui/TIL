@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-
+<h1>메인 페이지</h1>
+<hr>
+{% comment %}  url에서 요청보낼 경로 생성 {% endcomment %}
+{% comment %} http://127.0.0.1:8000/articles/1/ {% endcomment %}
+<a href="{% url "articles:detail" article.pk %}">
+  <p> {{ article.pk }}번째 게시글 </p>
+  <p>작성자 : {{ article.user.username }}</p>
+  <p>제목 : {{ article.title }}</p>
+</a>
 {% endblock content %}
 
 

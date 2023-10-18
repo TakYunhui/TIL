@@ -5,4 +5,4 @@ from .models import Article
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        field = '__all__'
+        field = ('title', 'content')
