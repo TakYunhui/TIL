@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let
+    let number = 10
+    number = 30 // 재할당 OK
+    console.log(number)
+    // let number = 20 재선언 X
+    const number2  = 10
+    // number2 = 20
+    // console.log(number2)
+    // Uncaught TypeError: Assignment to constant variable.
+
+    // const number2 = 20
+    // Uncaught SyntaxError: Identifier 'number2' has already been declared (at 01-variables.html:23:11)
+
+
+    // 블록 스코프
+    let x = 1
+    if (x === 1) {
+      let x = 2 
+      console.log(x) // 2
+    } 
+    console.log(x) // 1
+
+    // 템플릿 리터럴
+    const age = 100
+    const message = `홍길동은 ${age}세 입니다.`
+    console.log(message)
+  </script>
+</body>
+
+</html>
