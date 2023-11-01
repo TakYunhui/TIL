@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="increment" >
+      {{ count }}
+    </button>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue 
+
+    const app = createApp({
+      setup() {
+        // 객체가 새롭게 만들어지는 건 아님 
+        // 따라서 let 선언 x, value 접근
+        const count = ref(0)
+        const increment = function () {
+          count.value ++ 
+        }
+        return {
+          count, 
+          increment
+        }
+      }
+    })
+
+
+    app.mount('#app')
+
+  </script>
+</body>
+
+</html>

@@ -21,6 +21,7 @@
     })
       .then((response) => {
         const imgUrl = response.data[0].url
+        console.log(imgUrl)
         return imgUrl
       })
       .then((imgUrl) => {

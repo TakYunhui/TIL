@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ greeting }}</h1>
+    <button @click="count++">{{ count }}</button>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue // JS 객체: 구조 분해 할당 
+
+    const app = createApp({
+      setup() {
+      const count = ref(0)
+      const greeting = ref('Hello')
+      return {
+        // 객체 key - value 가 같으면 key만 적기 (단축 속성)
+        count,
+        greeting
+      }
+     }
+    })
+
+    // 어딘가에 css선택자를 통해 올려준다(mount)
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
